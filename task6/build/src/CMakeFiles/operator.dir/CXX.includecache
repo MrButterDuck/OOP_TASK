@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Operator/operator.h
+string
+-
+
+../include/Stack/stack.h
+ostream
+-
+iostream
+-
+
+/code/src/operator.cpp
+iostream
+-
+string
+-
+Operator/operator.h
+/code/src/Operator/operator.h
+Stack/stack.h
+-
+

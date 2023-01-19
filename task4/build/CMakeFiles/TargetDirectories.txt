@@ -1,0 +1,6 @@
+/code/build/CMakeFiles/rebuild_cache.dir
+/code/build/CMakeFiles/edit_cache.dir
+/code/build/CMakeFiles/main.dir
+/code/build/RingBuff/CMakeFiles/rebuild_cache.dir
+/code/build/RingBuff/CMakeFiles/edit_cache.dir
+/code/build/RingBuff/CMakeFiles/RingBuff.dir

@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../base64/include/base64.h
+iostream
+-
+string
+-
+iostream
+-
+string
+-
+algorithm
+-
+sstream
+-
+
+/code/base64/src/base64.cpp
+iostream
+-
+string
+-
+iostream
+-
+string
+-
+algorithm
+-
+sstream
+-
+vector
+-
+cstdlib
+-
+base64.h
+/code/base64/src/base64.h
+

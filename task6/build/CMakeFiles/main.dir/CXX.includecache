@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Operator/operator.h
+string
+-
+
+/code/main.cpp
+ostream
+-
+iostream
+-
+Operator/operator.h
+/code/Operator/operator.h
+

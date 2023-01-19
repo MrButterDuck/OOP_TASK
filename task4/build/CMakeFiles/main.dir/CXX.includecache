@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../RingBuff/include/RingBuff.h
+ostream
+-
+
+/code/main.cpp
+ostream
+-
+iostream
+-
+RingBuff.h
+/code/RingBuff.h
+
