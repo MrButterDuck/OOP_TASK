@@ -104,34 +104,20 @@ string FullandString(int x, int n)
 // РёР· С‡РёСЃР»РѕР° РІ  РєРѕРґС‹
 char TranslateInCode(int n)
 {
-    char map[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
-                  'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f',
-                  'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
-                  'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '/'};
-
-    for (auto i = 0; i < 63; i++)
-    {
-        if (n == i)
-        {
-            return map[i];
-        }
-    }
+    if ((n >= 0) && (n <= 25)) return (char)(n + 65);
+    else if ((n >= 26) && (n <= 51)) return (char)(n + 71);
+    else if ((n >= 52) && (n <= 61)) return (char)(n - 4);
+    else if (n == 62)return (char)(n - 19); 
+    else if (n == 63)return (char)(n - 16);
 }
 
 int TranslateInNum(char n)
 {
-    char map[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
-                  'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f',
-                  'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
-                  'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '/'};
-
-    for (auto i = 0; i < 63; i++)
-    {
-        if (n == map[i])
-        {
-            return i;
-        }
-    }
+    if ((n >= 'A') && (n <= 'Z')) return (int)(n - 65);
+    else if ((n >= 'a') && (n <= 'z')) return (int)(n - 71);
+    else if ((n >= '0') && (n <= '9')) return (int)(n + 4);
+    else if (n == '+')return (int)(n + 19); 
+    else if (n == '/')return (int)(n + 16);
 }
 
 void encode(string s, std::ostream &os)

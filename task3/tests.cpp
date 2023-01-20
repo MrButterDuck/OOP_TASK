@@ -41,3 +41,20 @@ TEST(DEcode2, DEcodeStr2)
 
         EXPECT_EQ(out.str(), "NANO");
 }
+TEST(Encode3, EncodeStr3)
+{
+        std::string s ="";
+         std::ostringstream out;
+        encode(s,out);
+
+        EXPECT_EQ(out.str(), "");
+}
+TEST(DEcode3, DEcodeStr3)
+{
+        std::string s ="";
+         std::ostringstream out;
+        base64_decode(s,out);
+
+        EXPECT_EQ(out.str(), "");
+}
+

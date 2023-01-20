@@ -1,6 +1,14 @@
 #pragma once
 #include <ostream>
 
+struct Node
+    {
+        int value = NULL;
+        Node* next;
+    };
+    Node* head;
+    Node* tmp;
+	
 class List 
 {
 public:

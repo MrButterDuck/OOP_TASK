@@ -2,14 +2,6 @@
 #include <ostream>
 #include "RingBuff.h"
 
-struct Node
-    {
-        int value = NULL;
-        Node* next;
-    };
-    Node* head;
-    Node* tmp;
-
     List::List()
     {
 

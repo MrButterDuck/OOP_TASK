@@ -12,6 +12,12 @@ int** CreateMatrix(int n)
     return tmp;
 }
 
+void DeleteMatrix(int** &matrix, int n)
+{
+    for(int i = 0; i < n; i++)delete matrix[i];
+    delete matrix;
+}
+
 void MaxNum(int** matrix, int n)
 {
     int max = matrix[0][0];
@@ -108,4 +114,7 @@ int main()
     int** B = SumMat(A, C, N);
     B = MultMat(B, B, N);
     PrintMatrix(B, N);
+    DeleteMatrix(A, N);
+    DeleteMatrix(B, N);
+    DeleteMatrix(C, N);
 }
