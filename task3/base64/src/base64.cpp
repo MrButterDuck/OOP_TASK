@@ -104,20 +104,14 @@ string FullandString(int x, int n)
 // РёР· С‡РёСЃР»РѕР° РІ  РєРѕРґС‹
 char TranslateInCode(int n)
 {
-    if ((n >= 0) && (n <= 25)) return (char)(n + 65);
-    else if ((n >= 26) && (n <= 51)) return (char)(n + 71);
-    else if ((n >= 52) && (n <= 61)) return (char)(n - 4);
-    else if (n == 62)return (char)(n - 19); 
-    else if (n == 63)return (char)(n - 16);
+    std::string base = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    return base[n];
 }
 
 int TranslateInNum(char n)
-{
-    if ((n >= 'A') && (n <= 'Z')) return (int)(n - 65);
-    else if ((n >= 'a') && (n <= 'z')) return (int)(n - 71);
-    else if ((n >= '0') && (n <= '9')) return (int)(n + 4);
-    else if (n == '+')return (int)(n + 19); 
-    else if (n == '/')return (int)(n + 16);
+{   
+    std::string base = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    return base.find(n);
 }
 
 void encode(string s, std::ostream &os)
